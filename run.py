@@ -15,9 +15,8 @@ recipient_number = os.environ['RECIPIENT_NUMBER']
 # Create a Twilio client
 client = Client(account_sid, auth_token)
 
-# Wait a random number of seconds
-delay = 1 # testing
-# delay = 6 * 60 * 60
+# Wait a random number of seconds in the next 6 hours
+delay = 6 * 60 * 60
 delay_seconds = random.randint(1, delay)  # Random time in the next 6 hours
 time.sleep(delay_seconds)
 
