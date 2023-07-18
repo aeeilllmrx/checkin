@@ -16,7 +16,9 @@ recipient_number = os.environ['RECIPIENT_NUMBER']
 client = Client(account_sid, auth_token)
 
 # Wait a random number of seconds
-delay_seconds = random.randint(1, 60 * 60 * 6)  # Random time in the next 6 hours
+delay = 1 # testing
+# delay = 6 * 60 * 60
+delay_seconds = random.randint(delay)  # Random time in the next 6 hours
 time.sleep(delay_seconds)
 
 # Send the message
@@ -27,7 +29,7 @@ message = client.messages.create(
 )
 
 # And again
-delay_seconds = random.randint(1, 60 * 60 * 6)  # Random time in the next 6 hours
+delay_seconds = random.randint(delay)  # Random time in the next 6 hours
 time.sleep(delay_seconds)
 
 # Send the message
