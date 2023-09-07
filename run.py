@@ -16,24 +16,13 @@ recipient_number = os.environ['RECIPIENT_NUMBER']
 client = Client(account_sid, auth_token)
 
 # Wait a random number of seconds in the next 6 hours
-delay = 6 * 60 * 60
-delay_seconds = random.randint(1, delay)  # Random time in the next 6 hours
+delay = 8 * 60 * 60
+delay_seconds = random.randint(1, delay)  # Random time in the next 8 hours
 time.sleep(delay_seconds)
 
 # Send the message
 message = client.messages.create(
     body='Hey, how are you feeling?',
-    from_=twilio_number,
-    to=recipient_number,
-)
-
-# And again
-delay_seconds = random.randint(1, delay)  # Random time in the next 6 hours
-time.sleep(delay_seconds)
-
-# Send the message
-message = client.messages.create(
-    body='Hey, how are you feeling now?',
     from_=twilio_number,
     to=recipient_number,
 )
