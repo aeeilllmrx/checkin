@@ -1,4 +1,6 @@
-Instructions:
+App that gives you a check-in text daily.
+
+Deploy instructions:
 
 - make a heroku application
 - add a scheduler that runs at 12pm UTC
